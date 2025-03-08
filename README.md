@@ -1,1 +1,1 @@
-Ini untuk tugas Pemlan khusus praktikum
+Direktori khusus tugas Praktikum Pemrograman Lanjut 
