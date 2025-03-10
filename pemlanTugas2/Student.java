@@ -5,7 +5,6 @@ public class Student {
     private double mathGrade;
     private double englishGrade;
     private double scienceGrade;
-    private double average;
     // Menambahkan atribut statusAkhir (nilai default adalah false)
     private boolean statusAkhir;
     // Menambahkan atribut jumlahObjek untuk menghitung jumlah objek yang dibuat dari instansiasi
