@@ -8,10 +8,14 @@ public class Main {
 
         int pilihan;
         do {
-            System.out.println("Mau ngapain?");
-            System.out.println("1. Tambah buku");
-            System.out.println("2. Tampilkan daftar buku");
-            System.out.println("3. Keluar");
+            System.out.println("\n╔═══════════════════════════════════════╗");
+            System.out.println("║      SISTEM MANAJEMEN PERPUSTAKAAN    ║");
+            System.out.println("╠═══════════════════════════════════════╣");
+            System.out.println("║  1. Tambah buku                       ║");
+            System.out.println("║  2. Tampilkan daftar buku             ║");
+            System.out.println("║  3. Keluar                            ║");
+            System.out.println("╚═══════════════════════════════════════╝\n");
+            System.out.print("Pilihan Anda: ");
             pilihan = sc.nextInt();
 
             switch (pilihan) {
@@ -27,11 +31,14 @@ public class Main {
 
                 case 3:
                     // Keluar dari program
-                    System.out.println("GET OUT!!!");
+                    System.out.println("\n╔═══════════════════════════════════════╗");
+                    System.out.println("║     TERIMA KASIH TELAH MENGGUNAKAN    ║");
+                    System.out.println("║      SISTEM MANAJEMEN PERPUSTAKAAN    ║");
+                    System.out.println("╚═══════════════════════════════════════╝\n");
                     break;
 
                 default:
-                    System.out.println("Pilihan tidak valid! Pilih dari opsi 1 - 3.");
+                    System.out.println("\nPilihan tidak valid! Pilih dari opsi 1 - 3.");
             }
 
         } while (pilihan != 3);
