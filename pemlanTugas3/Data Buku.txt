@@ -1,3 +1,4 @@
+// Contoh yang sudah diinput
 Laskar Pelangi, Andrea Hirata, 2005
 Hujan, Tere Liye, 2016
 Monris, Mekong, 2022
