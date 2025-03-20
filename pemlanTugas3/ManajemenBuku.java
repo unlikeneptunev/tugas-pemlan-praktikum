@@ -36,6 +36,7 @@ public class ManajemenBuku {
                     inputValid = true;
                 } else {
                     System.out.println("Jumlah buku harus lebih dari 0!");
+                    return;
                 }
             } catch (Exception e) {
                 System.out.println("Input tidak valid! Masukkan angka.");
