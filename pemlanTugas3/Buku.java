@@ -8,6 +8,7 @@ public class Buku {
         this.penulis = penulis;
         this.tahunTerbit = tahunTerbit;
     }
+    
     // Versi 1: Hanya menampilkan judul buku
     public void tampilkanInfo() {
         System.out.println("Judul buku: " + this.judul);
@@ -23,5 +24,4 @@ public class Buku {
             tampilkanInfo();
         }
     }
-
 }
