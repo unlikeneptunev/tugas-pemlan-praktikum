@@ -4,27 +4,37 @@ public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
+        // Instansiasi objek pelanggan untuk 5 orang
         Pelanggan pelanggan1 = new Pelanggan("3891262145", "Roger Sumatra", "1234", 20000000);
         Pelanggan pelanggan2 = new Pelanggan("5601296774", "Agung Mandiri", "5678", 30000000);
-        Pelanggan pelanggan3 = new Pelanggan("7424369420", "Rudi Knalpot", "9876", 50000000);
+        Pelanggan pelanggan3 = new Pelanggan("7424369420", "Rizal Ekonomi", "9876", 50000000);
+        Pelanggan pelanggan4 = new Pelanggan("3842345678", "Rico Racing Mandalika", "1357", 10000000);
+        Pelanggan pelanggan5 = new Pelanggan("5609876543", "Windah Batubara", "2468", 15000000);
 
+        // Menampilkan informasi pelanggan dengan meminta input nomor dan PIN pelanggan
         while (true) {
-            System.out.println("\n=== Sistem Transaksi Swalayan ===");
+            System.out.println("\n=== Login ke Sistem Swalayan Tiny ===");
             System.out.print("Masukkan nomor pelanggan: ");
             String nomor = scanner.nextLine();
             Pelanggan pelanggan = null;
 
+            // Mengecek apakah pelanggan terdaftar di sistem
             if (pelanggan1.getNomorPelanggan().equals(nomor)) {
                 pelanggan = pelanggan1;
             } else if (pelanggan2.getNomorPelanggan().equals(nomor)) {
                 pelanggan = pelanggan2;
             } else if (pelanggan3.getNomorPelanggan().equals(nomor)) {
                 pelanggan = pelanggan3;
+            } else if (pelanggan4.getNomorPelanggan().equals(nomor)) {
+                pelanggan = pelanggan4;
+            } else if (pelanggan5.getNomorPelanggan().equals(nomor)) {
+                pelanggan = pelanggan5;
             } else {
                 System.out.println("Nomor pelanggan tidak ditemukan.");
                 continue;
             }
 
+            // Autentikasi PIN pelanggan
             boolean autentikasiBerhasil = false;
             while (!autentikasiBerhasil && !pelanggan.isStatusBlokir()) {
                 System.out.print("Masukkan PIN Anda: ");
@@ -32,13 +42,14 @@ public class Main {
                 autentikasiBerhasil = pelanggan.autentikasi(pin);
             }
 
+            // Jika akun terblokir, tampilkan pesan dan lanjutkan ke iterasi berikutnya
             if (pelanggan.isStatusBlokir()) {
-                System.out.println("Akun Anda terblokir. Silakan hubungi layanan pelanggan.");
+                System.out.println("Akun Anda sudah terblokir. ");
                 continue;
             }
 
-            System.out.println("Selamat datang, " + pelanggan.getNama() + "!");
-            System.out.println("Saldo Anda: " + String.format("%,.0f", pelanggan.getSaldo()));
+            System.out.println("Selamat datang di Tiny, " + pelanggan.getNama() + "!");
+            System.out.println("Saldo Anda saat ini: " + String.format("%,.0f", pelanggan.getSaldo()));
 
             TransaksiPelanggan transaksi = new TransaksiPelanggan(pelanggan);
 
@@ -52,7 +63,7 @@ public class Main {
 
             switch (pilihan) {
                 case 1:
-                    System.out.print("Masukkan jumlah pembelian: ");
+                    System.out.print("Masukkan nominal pembelian (Rp): ");
                     int jumlah = scanner.nextInt();
                     scanner.nextLine();
                     transaksi.beli(jumlah, pelanggan.getPin());
@@ -64,7 +75,7 @@ public class Main {
                     transaksi.topUp(jumlahTopUp, pelanggan.getPin());
                     break;
                 case 3:
-                    System.out.println("Terima kasih telah menggunakan layanan kami!");
+                    System.out.println("Terima kasih telah mengunjungi Tiny!");
                     scanner.close();
                     return;
                 default:
