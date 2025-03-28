@@ -49,11 +49,11 @@ public class Main {
             }
 
             System.out.println("Selamat datang di Tiny, " + pelanggan.getNama() + "!");
-            System.out.println("Saldo Anda saat ini: " + String.format("%,.0f", pelanggan.getSaldo()));
+            System.out.printf("\nSaldo Anda saat ini: %.0f", pelanggan.getSaldo());
 
             TransaksiPelanggan transaksi = new TransaksiPelanggan(pelanggan);
 
-            System.out.println("Pilih transaksi:");
+            System.out.println("\nPilih transaksi:");
             System.out.println("1. Pembelian");
             System.out.println("2. Top-up");
             System.out.println("3. Keluar");
