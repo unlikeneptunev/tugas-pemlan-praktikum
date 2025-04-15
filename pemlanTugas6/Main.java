@@ -42,20 +42,17 @@ public class Main {
         System.out.println("===== PEKERJA =====");
 
         // 2 tahun kerja, 2 anak
-        Pekerja pekerja1 = new Pekerja("Negus", true, "117", true, 1000,
-                LocalDate.now().minusYears(2), 2);
+        Pekerja pekerja1 = new Pekerja("Negus", true, "117", true, 1000, LocalDate.now().minusYears(2), 2);
         System.out.println(pekerja1);
         System.out.println();
 
         // 9 tahun kerja, tidak punya anak
-        Pekerja pekerja2 = new Pekerja("Hubert", true, "118", true, 1000,
-                LocalDate.now().minusYears(9), 0);
+        Pekerja pekerja2 = new Pekerja("Hubert", true, "118", true, 1000, LocalDate.now().minusYears(9), 0);
         System.out.println(pekerja2);
         System.out.println();
 
         // 20 tahun kerja, anak 10
-        Pekerja pekerja3 = new Pekerja("Asteroid Destroyer", true, "119", true, 1000,
-                LocalDate.now().minusYears(20), 10);
+        Pekerja pekerja3 = new Pekerja("Asteroid Destroyer", true, "119", true, 1000, LocalDate.now().minusYears(20), 10);
         System.out.println(pekerja3);
         System.out.println();
 
@@ -63,9 +60,7 @@ public class Main {
         System.out.println("===== MANAGER =====");
 
         // Manager, 15 tahun kerja, gaji $7500
-        Manager manager = new Manager("CISO", 7500,
-                LocalDate.now().getYear() - 15, 1, 1,
-                3, "Dwi Funk See", "120", true, true);
+        Manager manager = new Manager("CISO", 7500, LocalDate.now().getYear() - 15, 1, 1, 3, "Dwi Funk See", "120", true, true);
         System.out.println(manager);
     }
 }
