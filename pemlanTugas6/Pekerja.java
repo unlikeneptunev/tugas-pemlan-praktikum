@@ -27,10 +27,10 @@ public class Pekerja extends Manusia {
     }
 
     public double getBonus() {
-        long lama = ChronoUnit.YEARS.between(tahunMasuk, LocalDate.now());
-        if (lama <= 5) {
+        long lamaBekerja = ChronoUnit.YEARS.between(tahunMasuk, LocalDate.now());
+        if (lamaBekerja <= 5) {
             return gaji * 0.05;
-        } else if (lama <= 10) {
+        } else if (lamaBekerja <= 10) {
             return gaji * 0.10;
         } else {
             return gaji * 0.15;
