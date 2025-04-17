@@ -1,66 +1,17 @@
 import java.time.LocalDate;
-
 public class Main {
     public static void main(String[] args) {
-        // Manusia (umum)
-        System.out.println("===== MANUSIA =====");
+        Manusia a = new Manusia("A", true, "111", true);
+        System.out.println(a + "\n");
 
-        // Laki-laki menikah
-        Manusia manusia1 = new Manusia("Adit", true, "111", true);
-        System.out.println(manusia1);
-        System.out.println();
+        MahasiswaFILKOM b = new MahasiswaFILKOM("165150300111100", 4.0, "B", "111", false, false);
+        System.out.println(b + "\n");
 
-        // Perempuan menikah
-        Manusia manusia2 = new Manusia("Lena", false, "112", true);
-        System.out.println(manusia2);
-        System.out.println();
+        Pekerja c = new Pekerja("C", true, "111", true, 1000, LocalDate.of(2016, 3, 2), 3);
+        c.setJumlahAnak(4);
+        System.out.println(c + "\n");
 
-        // Belum menikah
-        Manusia manusia3 = new Manusia("Rehan", true, "113", false);
-        System.out.println(manusia3);
-        System.out.println();
-
-        // Mahasiswa FILKOM
-        System.out.println("===== MAHASISWA FILKOM =====");
-
-        // IPK < 3
-        MahasiswaFILKOM mahasiswa1 = new MahasiswaFILKOM("245150200111001", 2.9, "Umar", "114", true, false);
-        System.out.println(mahasiswa1);
-        System.out.println();
-
-        // IPK 3 - 3.5
-        MahasiswaFILKOM mahasiswa2 = new MahasiswaFILKOM("225150300111002", 3.4, "Elaina", "115", false, false);
-        System.out.println(mahasiswa2);
-        System.out.println();
-
-        // IPK 3.5 - 4
-        MahasiswaFILKOM mahasiswa3 = new MahasiswaFILKOM("215150400111003", 3.9, "Yuki", "116", false, false);
-        System.out.println(mahasiswa3);
-        System.out.println();
-
-        // Pekerja
-        System.out.println("===== PEKERJA =====");
-
-        // 2 tahun kerja, 2 anak
-        Pekerja pekerja1 = new Pekerja("Negus", true, "117", true, 1000, LocalDate.now().minusYears(2), 2);
-        System.out.println(pekerja1);
-        System.out.println();
-
-        // 9 tahun kerja, tidak punya anak
-        Pekerja pekerja2 = new Pekerja("Hubert", true, "118", true, 1000, LocalDate.now().minusYears(9), 0);
-        System.out.println(pekerja2);
-        System.out.println();
-
-        // 20 tahun kerja, anak 10
-        Pekerja pekerja3 = new Pekerja("Asteroid Destroyer", true, "119", true, 1000, LocalDate.now().minusYears(20), 10);
-        System.out.println(pekerja3);
-        System.out.println();
-
-        // Managere
-        System.out.println("===== MANAGER =====");
-
-        // Manager, 15 tahun kerja, gaji $7500
-        Manager manager = new Manager("CISO", 7500, LocalDate.now().getYear() - 15, 1, 1, 3, "Dwi Funk See", "120", true, true);
-        System.out.println(manager);
+        Manager d = new Manager("HRD", 1000, 2017, 1, 2, 3, "D", "111", true, true);
+        System.out.println(d);
     }
 }
