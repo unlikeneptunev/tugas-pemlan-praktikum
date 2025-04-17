@@ -49,4 +49,8 @@ public class Pekerja extends Manusia {
                "jumlah anak : " + jumlahAnak + "\n" +
                "gaji    : " + gaji;
     }
+
+    public void setJumlahAnak(int i) {
+        this.jumlahAnak = i;
+    }
 }
