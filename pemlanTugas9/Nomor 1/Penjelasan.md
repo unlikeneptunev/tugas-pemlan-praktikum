@@ -5,7 +5,7 @@ Jalankan kode `TulisFile1.java` beberapa kali dan amati yang terjadi pada file y
 Jika parameter kedua yaitu `append` bernilai `false`, ketika sebelum di-run sudah ada isi di dalam `test.txt` kemudian di-run kembali, maka isi yang sebelumnya akan di-overwrite dengan input yang baru.
 <br><br>
 Sebaliknya, jika `append` bernilai `true` maka, isi sebelumnya tidak akan di-overwrite, tetapi akan ditulis langsung di sebelahnya.
-<br><br>
+<br>
 - Contoh ketika `append` bernilai `false`
 ```
 package nomor1;
