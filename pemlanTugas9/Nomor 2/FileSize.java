@@ -7,7 +7,7 @@ import java.io.IOException;
 
 public class FileSize {
     public static void main(String[] args) {
-        Path path = Paths.get("C:\\Users\\src\\Documents\\Kuliah\\SEMESTER 2\\Pemrograman Lanjut\\Tugas\\Praktikum_Bab10\\Operasi File\\src\\nomor2\\testSize1.txt"); //
+        Path path = Paths.get("path\\to\\file\\testSize.txt"); // Ganti dengan path yang sebenarnya
         try {
             long fileSizeInBytes = Files.size(path);
             long fileSizeInKB = fileSizeInBytes / 1024;
@@ -15,7 +15,7 @@ public class FileSize {
             System.out.println("Ukuran file: " + fileSizeInKB + " KB");
             System.out.println("Ukuran file: " + fileSizeInMB + " MB");
         } catch (IOException e) {
-            System.out.println("File tidak ditemukan.");
+            System.err.println("File tidak ditemukan.");
         }
     }
 }
