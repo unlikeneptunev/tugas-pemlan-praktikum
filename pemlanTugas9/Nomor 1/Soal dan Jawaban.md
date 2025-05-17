@@ -51,3 +51,6 @@ public class TulisFile1 {
 }
 ```
 Maka, ketika di-run dan kita masukkan "Kambing", maka di `test.txt` akan muncul `Kambing`. Setelah di-run lagi dan kita masukkan "Bebek", `Kambing` tidak akan hilang tetapi akan ditambahkan tepat di samping `Kambing` tanpa spasi dan menjadi `KambingBebek`. 
+
+Dokumentasi resmi:
+[Java `FileWriter` Class](https://docs.oracle.com/javase/8/docs/api/java/io/FileWriter.html)
