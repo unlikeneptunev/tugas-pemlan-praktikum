@@ -12,8 +12,8 @@ public class FileSize {
             long fileSizeInBytes = Files.size(path);
             long fileSizeInKB = fileSizeInBytes / 1024;
             long fileSizeInMB = fileSizeInKB / 1024;
-            System.out.println("Ukuran file: " + fileSizeInKB + " KB");
-            System.out.println("Ukuran file: " + fileSizeInMB + " MB");
+            System.out.println("Ukuran file dalam KB: " + fileSizeInKB + " KB");
+            System.out.println("Ukuran file dalam MB: " + fileSizeInMB + " MB");
         } catch (IOException e) {
             System.err.println("File tidak ditemukan.");
         }
