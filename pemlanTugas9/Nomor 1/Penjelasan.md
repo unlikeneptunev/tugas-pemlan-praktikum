@@ -28,3 +28,26 @@ public class TulisFile1 {
 }
 ```
 Maka, ketika di-run dan kita masukkan "Ayam", maka di `test.txt` akan muncul `Ayam`. Setelah di-run lagi dan kita masukkan "Sapi", `Ayam` akan hilang dan akan tergantikan oleh `Sapi`. 
+<br>
+- Contoh ketika `append` bernilai `true`
+```
+package nomor1;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
+
+public class TulisFile1 {
+    public static void main(String[] args) {
+        var keyboard = new Scanner(System.in);
+        System.out.print("Masukkan teks yang akan disimpan: ");
+        var text = keyboard.nextLine();
+        try (var writer = new FileWriter("test.txt", true)) {
+            writer.write(text);
+        } catch (IOException e) {
+            System.err.println("Gagal menulis ke file");
+        }
+    }
+}
+```
+Maka, ketika di-run dan kita masukkan "Kambing", maka di `test.txt` akan muncul `Kambing`. Setelah di-run lagi dan kita masukkan "Bebek", `Kambing` tidak akan hilang tetapi akan ditambahkan tepat di samping `Kambing` tanpa spasi dan menjadi `KambingBebek`. 
