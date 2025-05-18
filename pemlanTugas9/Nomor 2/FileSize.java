@@ -7,7 +7,8 @@ import java.io.IOException;
 
 public class FileSize {
     public static void main(String[] args) {
-        Path path = Paths.get("path\\to\\file\\testSize.txt"); // Ganti dengan path yang sebenarnya
+        // Menentukan path file (ganti dengan path yang sebenarnya)
+        Path path = Paths.get("path\\to\\file\\testSize.txt"); 
         try {
             long fileSizeInBytes = Files.size(path);
             long fileSizeInKB = fileSizeInBytes / 1024;
