@@ -6,6 +6,7 @@ public class ListFile {
 
     public static void main(String[] args) {
         try {
+            // Menentukan path file (ganti dengan path yang sebenarnya)
             File directory = new File("C:\\Users\\src\\Documents\\Kuliah\\SEMESTER 2\\Pemrograman Lanjut\\Tugas\\Praktikum_Bab10\\Operasi File\\src\\nomor3\\tes-list-file");
             File[] files = directory.listFiles();
 
