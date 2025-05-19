@@ -22,7 +22,8 @@ import java.io.IOException;
 
 public class testing {
     public static void main(String[] args) throws IOException {
-        FileReader fileRead = new FileReader("file-gaib.exe"); // File tidak dicek dan langsung coba dibaca
+        // File tidak dicek dan langsung coba dibaca
+        FileReader fileRead = new FileReader("file-gaib.exe"); 
         int karakter;
         while ((karakter = fileRead.read()) != -1) {
             System.out.print((char) karakter);
