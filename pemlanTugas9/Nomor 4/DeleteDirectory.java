@@ -18,7 +18,7 @@ public class DeleteDirectory {
 
 public static void main(String[] args) {
     // Menentukan direktori yang akan dihapus (ganti dengan direktori yang sesuai)
-    File dir = new File("C:\\Users\\src\\Documents\\Kuliah\\SEMESTER 2\\Pemrograman Lanjut\\Tugas\\Praktikum_Bab10\\Operasi File\\src\\nomor4\\testDelete");
+    File dir = new File("C:\\Users\\src\\Documents\\Kuliah\\SEMESTER 2\\Pemrograman Lanjut\\Tugas\\Praktikum_Bab10\\Operasi File\\src\\nomor4\\test-delete");
     if (dir.exists() && dir.isDirectory()) {
         // Menghapus direktori dan isinya
         deleteDirectory(dir);
