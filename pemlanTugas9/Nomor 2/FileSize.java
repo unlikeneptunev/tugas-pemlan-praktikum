@@ -8,7 +8,8 @@ import java.nio.file.Paths;
 public class FileSize {
 
     public static void main(String[] args) {
-        Path path = Paths.get("C:\\Users\\src\\Documents\\Kuliah\\SEMESTER 2\\Pemrograman Lanjut\\Tugas\\Praktikum_Bab10\\Operasi File\\src\\nomor2\\testSize.txt");
+	// Menentukan path file (ganti dengan path yang sebenarnya)
+        Path path = Paths.get("path\\to\\file\\testSize.txt");
         try {
             long fileSizeInBytes = Files.size(path);
             // 1 KB = 1024 Bytes
